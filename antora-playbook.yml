@@ -1,0 +1,20 @@
+site:
+  title: ARC42 Software Architecture Documentation Template
+  start_page: architecture:index.adoc
+content:
+  sources:
+    - url: file:///workspaces/antora
+      start_path: doc
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+    start_path: dark
+asciidoc:
+  sourcemap: true
+  extensions:
+    - asciidoctor-chart
+    - asciidoctor-comment-links
+    - asciidoctor-diagram
+output:
+  clean: true

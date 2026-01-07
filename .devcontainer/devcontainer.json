@@ -1,0 +1,44 @@
+// https://containers.dev/
+{
+  "name": "FluentBit DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "ARG_USER": "${localEnv:USER}"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      // VS code extensions
+      "extensions": [
+        "asciidoctor.asciidoctor-vscode",
+        "ms-azuretools.vscode-containers",
+        "redhat.vscode-yaml",
+        "dchanco.vsc-invoke",
+        "charliermarsh.ruff",
+        "Shopify.ruby-lsp",
+        "streetsidesoftware.code-spell-checker",
+        "ritwickdey.LiveServer"
+      ],
+      "settings": {
+        // Use bash as default shell
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/usr/bin/bash"
+          }
+        }
+      }
+    }
+  },
+  "mounts": [
+    // Make user settings available in container
+    "source=${localEnv:HOME}/.bashrc,target=${localEnv:HOME}/.bashrc,type=bind",
+    "source=${localEnv:HOME}/.gitconfig,target=${localEnv:HOME}/.gitconfig,type=bind",
+    "source=${localEnv:HOME}/.config,target=${localEnv:HOME}/.config,type=bind",
+    // Mount ssh keys
+    "source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind",
+    // Mount current workspace
+    "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind,consistency=cached"
+  ]
+}
