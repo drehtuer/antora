@@ -80,7 +80,7 @@ RUN \
 
 COPY \
   --chown=root:root \
-  --chmod=0700 \
+  --chmod=0600 \
   sudo.conf /etc/sudoers.d/sudoers
 
 # Install asciidoctor and asciidoctor gems

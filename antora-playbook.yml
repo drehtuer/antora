@@ -3,7 +3,7 @@ site:
   start_page: architecture:index.adoc
 content:
   sources:
-    - url: file:///workspaces/antora
+    - url: http://github.com/drehtuer/antora.git
       start_path: doc
 ui:
   bundle:
@@ -12,9 +12,5 @@ ui:
     start_path: dark
 asciidoc:
   sourcemap: true
-  extensions:
-    - asciidoctor-chart
-    - asciidoctor-comment-links
-    - asciidoctor-diagram
 output:
   clean: true
