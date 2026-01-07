@@ -43,6 +43,7 @@ RUN \
   ruby-dev \
   ssh \
   sudo \
+  vim \
   # Generate en_US.UTF-8 locales
   && localedef \
   --inputfile=en_US \
