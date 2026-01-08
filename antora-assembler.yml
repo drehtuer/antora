@@ -1,3 +1,0 @@
-pdf:
-  enabled: true
-  output_dir: build/pdf
