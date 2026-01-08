@@ -2,21 +2,18 @@ site:
   title: ARC42 Software Architecture Documentation Template
   start_page: doc:ROOT:index.adoc
 
-output:
-  clean: true
-  dir: build
+runtime:
+  cache_dir: ./.cache/antora
 
 content:
   sources:
     - url: https://github.com/drehtuer/antora.git
       start_path: doc
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
 asciidoc:
   sourcemap: true
-  extensions:
-    - asciidoctor-jira
-    - asciidoctor-kroki
-    - asciidoctor-treeview

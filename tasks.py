@@ -4,8 +4,10 @@ python-invoke tasks to run the Antora site generator.
 
 from invoke import context, task
 
+CACHE_DIR = '.cache/antora'
 BUILD_DIR = 'build/'
 ANTORA_PLAYBOOK = 'antora-playbook.yml'
+
 
 def ctx_run(
   ctx: context,
@@ -17,6 +19,7 @@ def ctx_run(
   and run the command.
   """
   ctx.run(' '.join(cmd))
+
 
 @task
 def clean(
@@ -31,8 +34,10 @@ def clean(
       'rm',
       '-rf',
       BUILD_DIR,
+      CACHE_DIR,
     ],
   )
+
 
 @task
 def build(
