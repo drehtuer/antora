@@ -2,6 +2,10 @@ site:
   title: ARC42 Software Architecture Documentation Template
   start_page: doc:ROOT:index.adoc
 
+output:
+  clean: true
+  dir: build
+
 runtime:
   cache_dir: ./.cache/antora
 
@@ -17,3 +21,7 @@ ui:
 
 asciidoc:
   sourcemap: true
+  extensions:
+    - asciidoctor-jira
+    - asciidoctor-kroki
+    - asciidoctor-treeview
