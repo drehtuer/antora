@@ -1,6 +1,10 @@
 site:
   title: ARC42 Software Architecture Documentation Template
-  start_page: architecture:ROOT:index.adoc
+  start_page: arc42:ROOT:arc42-template.adoc
+output:
+  clean: true
+  dir: build
+
 content:
   sources:
     - url: https://github.com/drehtuer/antora.git
@@ -11,5 +15,7 @@ ui:
     snapshot: true
 asciidoc:
   sourcemap: true
-output:
-  clean: true
+  extensions:
+    - asciidoctor-jira
+    - asciidoctor-kroki
+    - asciidoctor-treeview

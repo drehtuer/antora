@@ -40,7 +40,6 @@ RUN \
   python3 \
   python3-invoke \
   python-is-python3 \
-  ruby-dev \
   ssh \
   sudo \
   vim \
@@ -84,29 +83,23 @@ COPY \
   --chmod=0600 \
   sudo.conf /etc/sudoers.d/sudoers
 
-# Install asciidoctor and asciidoctor gems
-RUN \
-  gem install \
-  # https://rubygems.org/gems/asciidoctor
-  asciidoctor \
-  # https://rubygems.org/gems/asciidoctor-chart
-  asciidoctor-chart \
-  # https://rubygems.org/gems/asciidoctor-comment-links
-  asciidoctor-comment-links \
-  # https://rubygems.org/gems/asciidoctor-diagram
-  asciidoctor-diagram \
-  # https://rubygems.org/gems/asciidoctor-pdf
-  asciidoctor-pdf \
-  # https://rubygems.org/gems/asciidoctor-revealjs
-  asciidoctor-revealjs \
-  # https://rubygems.org/gems/pygments.rb
-  pygments.rb
-
 # Install Antora
 RUN \
   npm i -g \
+  # https://www.npmjs.com/package/antora
   @antora/cli@${ANTORA_VERSION} \
-  @antora/site-generator@${ANTORA_VERSION}
+  # https://www.npmjs.com/package/@antora/site-generator
+  @antora/site-generator@${ANTORA_VERSION} \
+  # https://www.npmjs.com/package/asciidoctor
+  asciidoctor \
+  # https://www.npmjs.com/package/asciidoctor-highlight.js
+  asciidoctor-highlight.js \
+  # https://www.npmjs.com/package/asciidoctor-jira
+  asciidoctor-jira \
+  # https://www.npmjs.com/package/asciidoctor-kroki
+  asciidoctor-kroki \
+  # https://www.npmjs.com/package/asciidoctor-treeview
+  asciidoctor-treeview
 
 USER ${ARG_USER}
 
