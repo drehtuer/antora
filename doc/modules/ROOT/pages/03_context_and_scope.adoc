@@ -1,4 +1,3 @@
-[[section-context-and-scope]]
 = Context and Scope
 
 

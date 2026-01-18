@@ -1,5 +1,6 @@
 name: doc
 title: ARC42 Architecture
 version: 0.1
+start_page: 01_introduction_and_goals.adoc
 nav:
   - modules/ROOT/nav.adoc

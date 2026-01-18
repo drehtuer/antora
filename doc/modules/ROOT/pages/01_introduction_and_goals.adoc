@@ -1,4 +1,3 @@
-[[section-introduction-and-goals]]
 = Introduction and Goals
 
 
