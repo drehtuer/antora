@@ -2,4 +2,4 @@ name: doc
 title: ARC42 Architecture
 version: 0.1
 nav:
-  - ROOT/nav.adoc
+  - modules/ROOT/nav.adoc
