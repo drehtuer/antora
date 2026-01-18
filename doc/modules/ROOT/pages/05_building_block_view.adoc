@@ -1,13 +1,11 @@
 [[section-building-block-view]]
-
-
-== Building Block View
+= Building Block View
 
 
 
 
 
-=== Whitebox Overall System
+== Whitebox Overall System
 
 
 
@@ -30,7 +28,7 @@ _<Description of important interfaces>_
 
 
 
-==== <Name black box 1>
+=== <Name black box 1>
 
 
 

@@ -1,25 +1,15 @@
 [[section-context-and-scope]]
-== Context and Scope
+= Context and Scope
 
 
-
-
-
-
-=== Business Context
-
-
-
+== Business Context
 
 
 **<Diagram or Table>**
 
 **<optionally: Explanation of external domain interfaces>**
 
-=== Technical Context
-
-
-
+== Technical Context
 
 
 **<Diagram or Table>**

@@ -1,5 +1,0 @@
-// asciidoc settings for EN (English)
-// ==================================
-// where are images located?
-:imagesdir: ./images
-:arc42help:

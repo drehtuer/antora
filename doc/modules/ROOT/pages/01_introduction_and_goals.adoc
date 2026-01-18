@@ -1,26 +1,16 @@
 [[section-introduction-and-goals]]
-== Introduction and Goals
+= Introduction and Goals
+
+
+== Requirements Overview
 
 
 
-
-
-=== Requirements Overview
-
+== Quality Goals
 
 
 
-
-=== Quality Goals
-
-
-
-
-
-=== Stakeholders
-
-
-
+== Stakeholders
 
 
 [options="header",cols="1,2,2"]

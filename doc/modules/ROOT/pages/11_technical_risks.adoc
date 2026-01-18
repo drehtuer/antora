@@ -1,2 +1,2 @@
 [[section-technical-risks]]
-== Risks and Technical Debts
+= Risks and Technical Debts
