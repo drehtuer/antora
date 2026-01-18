@@ -13,10 +13,18 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docker container
-        run: docker build -f .devcontainer/Dockerfile -t antora-build .
+        run: |
+          docker build \
+          -f .devcontainer/Dockerfile \
+          --build-arg ARG_USER=${{ github.actor }} \
+          -t antora-build .
 
       - name: Run Antora
-        run: docker run --rm -v ${{ github.workspace }}:/workspace -w /workspace antora-build antora antora-playbook.yml
+        run: |
+          docker run \
+          --rm -v ${{ github.workspace }}:/workspace \
+          -w /workspace antora-build \
+          antora antora-playbook.yml
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

@@ -76,16 +76,8 @@ RUN \
   --no-install-recommends \
   --yes \
   -qq \
-  nodejs
-
-COPY \
-  --chown=root:root \
-  --chmod=0600 \
-  sudo.conf /etc/sudoers.d/sudoers
-
-# Install Antora
-RUN \
-  npm i -g \
+  nodejs \
+  && npm i -g \
   # https://www.npmjs.com/package/antora
   @antora/cli@${ANTORA_VERSION} \
   # https://www.npmjs.com/package/@antora/site-generator
