@@ -1,6 +1,7 @@
 site:
   title: ARC42 Software Architecture Documentation Template
   start_page: doc:ROOT:01_introduction_and_goals.adoc
+  url: https://drehtuer.github.io/antora/
 
 output:
   clean: true
@@ -8,6 +9,8 @@ output:
 
 runtime:
   cache_dir: ./.cache/antora
+  log:
+    level: info
 
 content:
   sources:
@@ -29,4 +32,3 @@ asciidoc:
     icons: font
     icontype: svg
     lang: en
-    xrefstyle: short
