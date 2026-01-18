@@ -2,10 +2,10 @@
 # https://docs.docker.com/reference/dockerfile/
 FROM ubuntu:24.04
 
-LABEL name="FluentBit Dev Container" \
+LABEL name="Antora Dev Container" \
   maintainer="drehtuer" \
   version="1.0.0" \
-  description="Development Container for AdventOfCode2025"
+  description="Development Container for Antora"
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG ARG_USER

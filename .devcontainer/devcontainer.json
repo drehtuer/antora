@@ -1,6 +1,6 @@
 // https://containers.dev/
 {
-  "name": "FluentBit DevContainer",
+  "name": "Antora DevContainer",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
