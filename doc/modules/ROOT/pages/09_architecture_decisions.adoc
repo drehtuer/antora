@@ -1,9 +1,2 @@
-ifndef::imagesdir[:imagesdir: ../images]
-
 [[section-design-decisions]]
 == Architecture Decisions
-
-
-
-
-

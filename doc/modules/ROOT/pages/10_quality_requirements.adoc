@@ -1,5 +1,3 @@
-ifndef::imagesdir[:imagesdir: ../images]
-
 [[section-quality-scenarios]]
 == Quality Requirements
 
@@ -17,9 +15,3 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 
 === Quality Scenarios
-
-
-
-
-
-
