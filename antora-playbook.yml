@@ -26,12 +26,19 @@ ui:
         - .nojekyll
     - path: .nojekyll
 
+antora:
+  extensions:
+    - require: "asciidoctor-treeview/antora"
+    - require: "@sntke/antora-mermaid-extension"
+      mermaid_library_url: https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
+      script_stem: header-scripts
+      mermaid_initialize_options:
+        start_on_load: true
+
 asciidoc:
   sourcemap: true
   extensions:
-    - asciidoctor-jira
-    - asciidoctor-kroki
-    - asciidoctor-treeview
+    - "@deepsymmetry/asciidoctor-bytefield"
   attributes:
     icons: font
     icontype: svg

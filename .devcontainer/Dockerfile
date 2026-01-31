@@ -51,12 +51,9 @@ RUN \
   --alias-file=/usr/share/locale/locale.alias \
   en_US.UTF-8 \
   # Add non-root user,
-  # password needed for `sudo`
   && useradd \
   --create-home \
   --user-group \
-  --groups \
-  sudo \
   --shell /usr/bin/bash \
   ${ARG_USER} \
   # Invoke completion
@@ -72,6 +69,8 @@ RUN \
   curl -fsSL https://deb.nodesource.com/setup_${NODE_MAJOR}.x \
   | bash - \
   && apt-get update \
+  --yes \
+  -qq \
   && apt-get install \
   --no-install-recommends \
   --yes \
@@ -84,14 +83,15 @@ RUN \
   @antora/site-generator@${ANTORA_VERSION} \
   # https://www.npmjs.com/package/asciidoctor
   asciidoctor \
-  # https://www.npmjs.com/package/asciidoctor-highlight.js
-  asciidoctor-highlight.js \
-  # https://www.npmjs.com/package/asciidoctor-jira
-  asciidoctor-jira \
-  # https://www.npmjs.com/package/asciidoctor-kroki
-  asciidoctor-kroki \
   # https://www.npmjs.com/package/asciidoctor-treeview
-  asciidoctor-treeview
+  asciidoctor-treeview \
+  # https://www.npmjs.com/package/@asciidoctor/tabs
+  @asciidoctor/tabs \
+  # https://www.npmjs.com/package/@deepsymmetry/asciidoctor-bytefield
+  @deepsymmetry/asciidoctor-bytefield \
+  # https://www.npmjs.com/package/@sntke/antora-mermaid-extension
+  @sntke/antora-mermaid-extension
+
 
 USER ${ARG_USER}
 

@@ -1,13 +1,28 @@
 = Building Block View
 
+[mermaid]
+....
+sequenceDiagram
+autonumber
 
+participant a as Alice
+participant b as Bob
 
-
+a ->>+ b : Hello.
+b -->>- a : Hi, there.
+....
 
 == Whitebox Overall System
 
 
-
+.A byte field
+[bytefield]
+----
+(draw-column-headers)
+(draw-box 42)
+(draw-gap "Whee!")
+(draw-bottom)
+----
 
 
 _**<Overview Diagram>**_
